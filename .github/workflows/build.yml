@@ -24,19 +24,19 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: ${{github.sha}}-list
-        path: Debug/renode-test.list
+        path: Debug/F767ZI_LWIP_SERVER.list
 
     - name: Archive map file
       uses: actions/upload-artifact@v2
       with:
         name: ${{github.sha}}-map
-        path: Debug/renode-test.map
+        path: Debug/F767ZI_LWIP_SERVER.map
 
     - name: Archive elf file
       uses: actions/upload-artifact@v2
       with:
         name: ${{github.sha}}-elf
-        path: Debug/renode-test.elf
+        path: Debug/F767ZI_LWIP_SERVER.elf
 
     - name: Setup landing page
       uses: cuchi/jinja2-action@v1.2.0
