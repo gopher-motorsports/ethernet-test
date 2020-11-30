@@ -56,8 +56,8 @@ F767ZI_LWIP_SERVER.bin \
 all: F767ZI_LWIP_SERVER.elf secondary-outputs
 
 # Tool invocations
-F767ZI_LWIP_SERVER.elf: $(OBJS) $(USER_OBJS) C:\Users\bents\STM32CubeIDE\workspace_1.4.0\F767ZI_LWIP_SERVER\STM32F767ZITX_FLASH.ld
-	arm-none-eabi-gcc -o "F767ZI_LWIP_SERVER.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\bents\STM32CubeIDE\workspace_1.4.0\F767ZI_LWIP_SERVER\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="F767ZI_LWIP_SERVER.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+F767ZI_LWIP_SERVER.elf: $(OBJS) $(USER_OBJS) ../STM32F767ZITX_FLASH.ld
+	arm-none-eabi-gcc -o "F767ZI_LWIP_SERVER.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"../STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="F767ZI_LWIP_SERVER.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
